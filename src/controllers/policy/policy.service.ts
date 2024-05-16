@@ -23,10 +23,10 @@ export const remove = async (id: string) => {
 
 export const sendMessageBeforeOneMonth = async () => {
   let policy = await Policy.find({
-    // policy_expiry_date: {
-    //   $gte: calculateDayRange(30).start,
-    //   $lte: calculateDayRange(30).end,
-    // },
+    policy_expiry_date: {
+      $gte: calculateDayRange(30).start,
+      $lte: calculateDayRange(30).end,
+    },
   })
     .select("name mobile vehicle_number insurance_type policy_expiry_date")
     .lean();

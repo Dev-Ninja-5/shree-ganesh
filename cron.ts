@@ -14,7 +14,7 @@ cron.schedule(
     name: "REMIND_CUSTOMERS",
     scheduled: true,
     timezone: "Etc/UTC",
-    runOnInit: true,
+    runOnInit: false,
   }
 );
 
